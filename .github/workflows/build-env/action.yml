@@ -83,6 +83,7 @@ runs:
       - name: Install necessary packages
         shell: bash
         run: |
+          export DEBIAN_FRONTEND=noninteractive
           if [ "${{ env.SYSTEM_VERSION }}" == "oldest" ]; then
             # Tzdata
             TZ=America/Los_Angeles
