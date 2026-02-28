@@ -198,7 +198,7 @@ runs:
 
             # Install Libtinfo5
             ${{ env.CURLX }} http://launchpadlibrarian.net/580830584/libtinfo5_6.3-2_amd64.deb libtinfo5.deb
-            sudo apt install ./libtinfo5.deb
+            sudo apt install ./libtinfo5.deb -y --allow-downgrades
             rm -f libtinfo5.deb
 
             if [ "${{ env.PYTHON_VERSION }}" == "3" ]; then
